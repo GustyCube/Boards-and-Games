@@ -1,33 +1,109 @@
+
 body {
-    background-color: lightgray;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, #f0f8ff, #add8e6);
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-align: center;
 }
-  
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
 p {
     color: black;
+    font-size: 16px;
 }
-  
-h1 {
-    font-size: 24px;
-}
-  
-.text {
-    color: black;
-}
-  
+
 #knight {
     width: 600px;
     height: auto;
+    transition: transform 0.3s;
+    position: relative;
 }
 
-@media only screen and (max-width: 400px) {
-  #knight {
-    width: 300px;
-  }
+#knight:active {
+    transform: scale(0.9) rotate(15deg);
+}
+
+#knight::after {
+    content: 'Click to see the magic!';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    display: none;
+}
+
+#knight:hover::after {
+    display: block;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #005f73;
+}
+
+
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+
+.grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin: 20px;
+    padding: 0 10px;
+}
+
+.card {
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
+    #knight {
+        width: 300px;
+    }
 }
 
 @media only screen and (max-width: 300px) {
-  #knight {
-    max-width: 300px;
-    width: 100%;
-  }
+    #knight {
+        max-width: 300px;
+        width: 100%;
+    }
 }
