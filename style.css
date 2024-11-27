@@ -30,24 +30,6 @@ p {
     transform: scale(0.9) rotate(15deg);
 }
 
-#knight::after {
-    content: 'Click to see the magic!';
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #000;
-    color: #fff;
-    padding: 5px;
-    border-radius: 3px;
-    font-size: 12px;
-    display: none;
-}
-
-#knight:hover::after {
-    display: block;
-}
-
 /* Button Styling */
 .button-container {
     margin-top: 20px;
@@ -64,6 +46,7 @@ p {
     font-weight: bold;
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 }
 
 .btn:hover {
