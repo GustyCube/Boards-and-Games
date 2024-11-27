@@ -3,22 +3,38 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <title>Boards and Games</title>
         <meta charset="UTF-8">
     </head>
     <body>
-       <h1 class="text">Homepage</h1>
-       <p class="text">Welcome to Boards and Games! We make board games not that boering. Take a look around and if you dont like anything okie dokie!</p>
-       <img id="knight" alt="knight" src="https://upload.wikimedia.org/wikipedia/commons/8/85/BLACK_CHESS_KNIGHT_ROTATED_THREE_HUNDRED_FIFTEEN_DEGREES.svg">
-      
-      <script>
+        <h1 class="text">Homepage</h1>
+        <p class="text">Welcome to Boards and Games! We make board games not that boring. Take a look around and if you don't like anything, okie dokie!</p>
+        
+        <img id="knight" alt="knight" 
+             src="https://upload.wikimedia.org/wikipedia/commons/8/85/BLACK_CHESS_KNIGHT_ROTATED_THREE_HUNDRED_FIFTEEN_DEGREES.svg">
+        
+        <button id="toggle-theme" class="btn">Toggle Dark Mode</button>
 
-        const knight = document.querySelector("#knight");
-
-        knight.addEventListener("click", () => {
-           alert(`knight says "Welcome!"`);
-        });
-      </script>
+        <div class="grid">
+            <div class="card">Game 1</div>
+            <div class="card">Game 2</div>
+            <div class="card">Game 3</div>
+        </div>
       
+        <script>
+            const knight = document.querySelector("#knight");
+            const button = document.getElementById("toggle-theme");
+            const greetings = ["Welcome!", "Nice to see you!", "Enjoy your stay!"];
+
+            knight.addEventListener("click", () => {
+                const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+                alert(`Knight says: "${randomGreeting}"`);
+            });
+
+            button.addEventListener("click", () => {
+                document.body.classList.toggle("dark-mode");
+            });
+        </script>
     </body>
 </html>
