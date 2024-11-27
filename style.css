@@ -14,19 +14,19 @@ h1 {
     color: black;
 }
   
-#smiley {
+#knight {
     width: 400px;
     height: auto;
 }
 
 @media only screen and (max-width: 400px) {
-  #smiley {
+  #knight {
     width: 300px;
   }
 }
 
 @media only screen and (max-width: 300px) {
-  #smiley {
+  #knight {
     max-width: 300px;
     width: 100%;
   }
