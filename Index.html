@@ -8,16 +8,11 @@
         <meta charset="UTF-8">
         <style>
             #knight {
-                filter: brightness(0) invert(1); /* Makes the knight white */
-                transition: transform 0.3s, filter 0.3s; /* Adds smooth transitions */
+                transition: transform 0.3s; /* Adds smooth hover animation */
             }
 
             #knight:hover {
-                transform: scale(1.2); /* Enlarges the knight on hover */
-            }
-
-            body.dark-mode #knight {
-                filter: brightness(2) invert(1); /* Adjust brightness for dark mode */
+                transform: scale(1.2); /* Slightly enlarges the knight on hover */
             }
         </style>
     </head>
@@ -25,8 +20,7 @@
         <h1 class="text">Homepage</h1>
         <p class="text">Welcome to Boards and Games! We make board games not that boring. Take a look around and if you don't like anything, okie dokie!</p>
         
-        <img id="knight" alt="knight" 
-             src="https://upload.wikimedia.org/wikipedia/commons/8/85/BLACK_CHESS_KNIGHT_ROTATED_THREE_HUNDRED_FIFTEEN_DEGREES.svg">
+        <img id="knight" alt="Knight image angled to the right" src="/images/knight.png">
         
         <div class="button-container">
             <button id="toggle-theme" class="btn">Toggle Dark Mode</button>
