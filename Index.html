@@ -8,14 +8,18 @@
         <meta charset="UTF-8">
         <style>
             #knight {
+                filter: invert(1) brightness(2); /* Inverts colors and makes the knight white */
                 transition: transform 0.3s, filter 0.3s;
-                transform: rotate(-10deg) scale(1.1); /* Slight rotation and scale */
-                filter: hue-rotate(45deg); /* Add a color hue */
+                transform: rotate(-10deg) scale(1.1); /* Adds subtle rotation and scaling */
             }
 
             #knight:hover {
-                transform: rotate(0deg) scale(1.2); /* Animate back to normal on hover */
-                filter: hue-rotate(90deg); /* Enhance the color on hover */
+                transform: rotate(0deg) scale(1.2); /* Reset rotation and slightly enlarge on hover */
+                filter: invert(1) brightness(2.5); /* Enhance brightness on hover */
+            }
+
+            body.dark-mode #knight {
+                filter: invert(0); /* Restore the knight's original color in dark mode */
             }
         </style>
     </head>
