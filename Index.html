@@ -6,6 +6,18 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <title>Boards and Games</title>
         <meta charset="UTF-8">
+        <style>
+            #knight {
+                transition: transform 0.3s, filter 0.3s;
+                transform: rotate(-10deg) scale(1.1); /* Slight rotation and scale */
+                filter: hue-rotate(45deg); /* Add a color hue */
+            }
+
+            #knight:hover {
+                transform: rotate(0deg) scale(1.2); /* Animate back to normal on hover */
+                filter: hue-rotate(90deg); /* Enhance the color on hover */
+            }
+        </style>
     </head>
     <body>
         <h1 class="text">Homepage</h1>
